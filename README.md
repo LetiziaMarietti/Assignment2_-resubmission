@@ -13,3 +13,27 @@ The texts were manually extracted from two distinct websites, https://www.italia
 ### Cleaning and preprocessing steps
 The only text cleaning operations performed were string replacement (str.replace()) and whitespace stripping (str.strip()), in order to remove line break characters and excess whitespace. 
 As far as preprocessing steps, tokenization, lemmatization and parts-of-speech tagging were performed using spaCy. 
+
+### Annotations
+Additional columns (“Title”, “Author”, “Collection”, “Year”) were annexed to the initial dataset by merging it with a secondary table using spaCy. The same tool was later employed to perform named entity recognition, adding a column with named entity tags and one with the words and phrases identified as named entities (“Named_Entities”, “NE_Words”). However, the NER system often failed to accurately categorize words into their respective entities, likely due to the limitations of the small model employed. 
+At the end of the code execution, the dataset was saved in a CSV format. 
+
+### CSV file description 
+The CSV file contains the following columns: 
+
+| Variable name | Description |
+| ----------------------- | ------------------------------------------------------------------------------------------ |
+| Filename                | The original .txt file name                                                                |
+| Title                   | The poem’s title                                                                           |
+| Author                  | The author of the poem                                                                     |
+| First Collection        | The collection where the poem was first published                                          |
+| First Publication Year  | Year of the first (or only) collection's publication                                       |
+| Second Collection       | The second published collection, gathering all of the author's war poems (if applicable)   |
+| Second Publication Year | Year of the second collection's publication (if applicable)                                |
+| Document                | The original, unprocessed, text                                                            |
+| Text                    | The full cleaned text                                                                      |
+| Tokens                  | Individual words of each poem                                                              |
+| Lemmas                  | Base form of each token                                                                    |
+| POS                     | Parts-of-speech tags categorizing each word                                                |
+| Named_Entities          | Named entities categories                                                                  |
+| NE_Words                | The words associated with named entities                                                   |
