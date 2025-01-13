@@ -39,3 +39,8 @@ The CSV file contains the following columns:
 | POS                     | Parts-of-speech tags categorizing each word                                                |
 | Named_Entities          | Named entities categories                                                                  |
 | NE_Words                | The words associated with named entities                                                   |
+
+### Small analysis 
+The analysis aims to detect the possible predominance of personal/ possessive pronouns and first person verbs in the Italian and English 
+texts, to investigate how impactful is personal experience on the authors' writing, based on word frequencies. The results do not show a massive presence of the targeted words, although, for a more thorough analysis, more terms should be taken into consideration (other verbs in first person) or the context, which would require a closer investigation.
+Overall, Ungaretti's poems show a higher frequency of personal terms on the total number of words, as his poetry is ermetic and essential, using as little words as possible to convey meaning.  
